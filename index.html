@@ -3,126 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CS325 Full Stack Web Development</title>
+  <title>CAWPILE Book Review Tool</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      color: #342e20;
-      box-sizing: border-box;
-    }
-
-    html {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-      background-image: linear-gradient(#e4d2aa,#fdfdfd);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    body {
-      font-family: "Open Sans", sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      font-size: 1.2rem; /* Base text a bit bigger */
-    }
-
-    p {
-      padding-bottom: 35px;
-      font-size: 1.25rem;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    .title {
-      display: flex;
-      justify-content: center;
-      padding: 6vh;
-    }
-
-    .title h1 {
-      font-size: 2.5rem; /* Bigger header */
-      font-weight: 700;
-    }
-
-    main {
-      background-color: #edfbff;
-      padding: 60px;
-      border-radius: 12px;
-      max-width: 900px;
-      width: 100%;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-    }
-
-    footer {
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-      font-family: "Open Sans", sans-serif;
-      font-size: 1rem;
-      margin-top: 30px;
-      width: 100%;
-    }
-
-    /* Assignment list styles */
-    ul.assignments {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul.assignments li {
-      margin-bottom: 20px;
-    }
-
-    ul.assignments a {
-      display: block;
-      padding: 18px 24px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.2rem; /* Bigger text */
-      color: #2a3b4c;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    ul.assignments a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 12px rgba(0,0,0,0.18);
-      background-color: #f7faff;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="title">
-    <h1>CS325 Full Stack Web Development</h1>
+    <h1>CAWPILE Book Review Tool</h1>
   </header>
 
   <main>
     <p>
-      Welcome to my CS325 Full Stack Web Development assignments page. Here, you’ll find links to each of my projects and exercises throughout the course.
+      The CAWPILE book rating system is a structured, category-based method for 
+      reviewing books, originally created by G from Book Roast. The acronym stands 
+      for Characters, Atmosphere, Writing, Plot, Intrigue, Logic, and Enjoyment, 
+      with each category rated on a scale from 1 to 10. These scores are then averaged 
+      to produce an overall rating out of 10, which can be translated into a star 
+      rating. It’s designed to encourage thoughtful reflection on specific aspects 
+      of a book, rather than relying solely on gut feeling. This tool is using SusanLynKnits 
+      explanation as a foundation due to her redefining or expanding the category 
+      descriptions to more accurately reflect what matters most to readers when evaluating 
+      a book.
     </p>
-
-    <ul class="assignments">
-      <li><a href="assignment1.html">Assignment 1: HTML Basics</a></li>
-      <li><a href="assignment2.html">Assignment 2: CSS Styling</a></li>
-      <li><a href="assignment3.html">Assignment 3: JavaScript Intro</a></li>
-      <li><a href="assignment4.html">Assignment 4: DOM Manipulation</a></li>
-      <li><a href="assignment5.html">Assignment 5: JSON & XML</a></li>
-    </ul>
+    <br>
+    <form>
+      <label for="characters">Characters</label>
+      <select id="characters" name="characters">
+        <option value="10">10 – I would die for them</option>
+        <option value="9.5">9.5</option>
+        <option value="9">9 – I’ll think about these characters often</option>
+        <option value="8.5">8.5</option>
+        <option value="8">8 – The characters are really good</option>
+        <option value="7.5">7.5</option>
+        <option value="7">7 – I really like some of the characters</option>
+        <option value="6.5">6.5</option>
+        <option value="6">6 – I sort of like a few characters</option>
+        <option value="5.5">5.5</option>
+        <option value="5">5 – No strong feelings</option>
+        <option value="4.5">4.5</option>
+        <option value="4">4 – 1 or 2 characters aren’t terrible</option>
+        <option value="3.5">3.5</option>
+        <option value="3">3 – I couldn’t care less</option>
+        <option value="2.5">2.5</option>
+        <option value="2">2 – I want to punch them. They don’t seem like real people.</option>
+        <option value="1.5">1.5</option>
+        <option value="1">1 – I hope they die</option>
+      </select>
+      <label for="atmosphere">Atmosphere</label>
+      <select id="atmosphere" name="atmosphere">
+        <option value="10">10 – Setting is amazing and unique</option>
+        <option value="9.5">9.5</option>
+        <option value="9">9 – I want to read more books in this setting</option>
+        <option value="8.5">8.5</option>
+        <option value="8">8 – I really like the setting</option>
+        <option value="7.5">7.5</option>
+        <option value="7">7 – Setting is pretty good</option>
+        <option value="6.5">6.5</option>
+        <option value="6">6 – Nothing special, a few cool things</option>
+        <option value="5.5">5.5</option>
+        <option value="5">5 – No strong feelings</option>
+        <option value="4.5">4.5</option>
+        <option value="4">4 – A few things were good</option>
+        <option value="3.5">3.5</option>
+        <option value="3">3 – Haven’t I read this before?</option>
+        <option value="2.5">2.5</option>
+        <option value="2">2 – Boring, Boring, Boring</option>
+        <option value="1.5">1.5</option>
+        <option value="1">1 – Where did this book take place?</option>
+      </select>
+      <label for="writing">Writing</label>
+      <select id="writing" name="writing">
+        <option value="10">10 – Wow, that was awesome</option>
+        <option value="9.5">9.5</option>
+        <option value="9">9 – Excellent</option>
+        <option value="8.5">8.5</option>
+        <option value="8">8 – Very good</option>
+        <option value="7.5">7.5</option>
+        <option value="7">7 – I liked it</option>
+        <option value="6.5">6.5</option>
+        <option value="6">6 – It seemed pretty good</option>
+        <option value="5.5">5.5</option>
+        <option value="5">5 – No strong feelings</option>
+        <option value="4.5">4.5</option>
+        <option value="4">4 – I had to reread stuff repeatedly</option>
+        <option value="3.5">3.5</option>
+        <option value="3">3 – Why would you do that?</option>
+        <option value="2.5">2.5</option>
+        <option value="2">2 – They need an editor / I’m confused</option>
+        <option value="1.5">1.5</option>
+        <option value="1">1 – They didn’t use quotation marks and other stupid choices</option>
+      </select>
+      <label for="plot">Plot</label>
+      <select id="plot" name="plot">
+        <option value="10">10 – Masterfully crafted, every twist landed</option>
+        <option value="9.5">9.5</option>
+        <option value="9">9 – Great pacing and developments</option>
+        <option value="8.5">8.5</option>
+        <option value="8">8 – Solid structure and flow</option>
+        <option value="7.5">7.5</option>
+        <option value="7">7 – Good, a few rough patches</option>
+        <option value="6.5">6.5</option>
+        <option value="6">6 – Okay, predictable or uneven at times</option>
+        <option value="5.5">5.5</option>
+        <option value="5">5 – No strong feelings</option>
+        <option value="4.5">4.5</option>
+        <option value="4">4 – Some plot holes or confusion</option>
+        <option value="3.5">3.5</option>
+        <option value="3">3 – Where is this going?</option>
+        <option value="2.5">2.5</option>
+        <option value="2">2 – Illogical or sloppy</option>
+        <option value="1.5">1.5</option>
+        <option value="1">1 – What even was the plot?</option>
+      </select>
+      <label for="intrigue">Intrigue</label>
+      <select id="intrigue" name="intrigue">
+        <option value="10">10 – I couldn't put it down</option>
+        <option value="9.5">9.5</option>
+        <option value="9">9 – I kept wanting to read more</option>
+        <option value="8.5">8.5</option>
+        <option value="8">8 – I was mostly hooked</option>
+        <option value="7.5">7.5</option>
+        <option value="7">7 – Pretty engaging overall</option>
+        <option value="6.5">6.5</option>
+        <option value="6">6 – It held my attention enough</option>
+        <option value="5.5">5.5</option>
+        <option value="5">5 – No strong feelings</option>
+        <option value="4.5">4.5</option>
+        <option value="4">4 – I got distracted often</option>
+        <option value="3.5">3.5</option>
+        <option value="3">3 – I kept checking the page count</option>
+        <option value="2.5">2.5</option>
+        <option value="2">2 – I had to force myself to finish</option>
+        <option value="1.5">1.5</option>
+        <option value="1">1 – I didn’t care what happened</option>
+      </select>
+      <label for="logic">Logic</label>
+      <select id="logic" name="logic">
+        <option value="10">10 – Everything made sense and flowed perfectly</option>
+        <option value="9.5">9.5</option>
+        <option value="9">9 – Very few issues with consistency or world rules</option>
+        <option value="8.5">8.5</option>
+        <option value="8">8 – Mostly solid logic and internal consistency</option>
+        <option value="7.5">7.5</option>
+        <option value="7">7 – Minor inconsistencies but forgivable</option>
+        <option value="6.5">6.5</option>
+        <option value="6">6 – Some logic gaps or weak worldbuilding</option>
+        <option value="5.5">5.5</option>
+        <option value="5">5 – No strong feelings</option>
+        <option value="4.5">4.5</option>
+        <option value="4">4 – Significant plot or rule inconsistencies</option>
+        <option value="3.5">3.5</option>
+        <option value="3">3 – Many things didn't add up</option>
+        <option value="2.5">2.5</option>
+        <option value="2">2 – The world or logic completely fell apart</option>
+        <option value="1.5">1.5</option>
+        <option value="1">1 – Nonsensical or contradictory</option>
+      </select>
+      <label for="enjoyment">Enjoyment</label>
+      <select id="enjoyment" name="enjoyment">
+        <option value="10">10 – I absolutely loved it</option>
+        <option value="9.5">9.5</option>
+        <option value="9">9 – I really, really liked it</option>
+        <option value="8.5">8.5</option>
+        <option value="8">8 – I enjoyed it a lot</option>
+        <option value="7.5">7.5</option>
+        <option value="7">7 – I liked it</option>
+        <option value="6.5">6.5</option>
+        <option value="6">6 – It was okay</option>
+        <option value="5.5">5.5</option>
+        <option value="5">5 – Meh</option>
+        <option value="4.5">4.5</option>
+        <option value="4">4 – Some parts were painful to get through</option>
+        <option value="3.5">3.5</option>
+        <option value="3">3 – Not very enjoyable</option>
+        <option value="2.5">2.5</option>
+        <option value="2">2 – I regret reading it</option>
+        <option value="1.5">1.5</option>
+        <option value="1">1 – I hated it</option>
+      </select>
+      <button id="myBtn" type="submit">Submit</button>
+    </form>
   </main>
 
   <footer>
-    <div class="footer_text">Rebecca Corder &copy; 2025</div>
+    <div class="footer_text">Rebecca Corder &copy 2024</div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
