@@ -37,8 +37,31 @@ myBtn.addEventListener("click", function(e) {
     // Convert to star rating out of 5
     let finalStar = roundToNearestQuarter(rawStar / 2); // divided by 2 for 5-star scale
   
-    // Display result
-    alert(`CAWPILE Average: ${rawStar}\nStar Rating: ${finalStar} ⭐`);
+    // Display result in modal
+    let modal = document.getElementById("resultModal");
+    let modalText = document.getElementById("modalText");
+    let closeBtn = document.querySelector(".close");
+
+    modalText.innerHTML = `CAWPILE Average: <strong>${rawStar}</strong><br>Star Rating: <strong>${finalStar}</strong>`;
+    modal.style.display = "flex";
+
+    // Close modal when clicking the close
+    let closeModalBtn = document.getElementById("closeModalBtn");
+
+    closeBtn.onclick = closeModalBtn.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function(e) {
+      if (e.target === modal) modal.style.display = "none";
+    };
+
+    // Close modal when clicking outside the box
+    window.onclick = function(e) {
+      if (e.target == modal) {
+        modal.style.display = "none";
+      }
+    };
   });
   
 

@@ -47,9 +47,9 @@
         <option value="3.5">3.5</option>
         <option value="3">3 – I couldn’t care less</option>
         <option value="2.5">2.5</option>
-        <option value="2">2 – I want to punch them. They don’t seem like real people.</option>
+        <option value="2">2 – They don’t seem like real people.</option>
         <option value="1.5">1.5</option>
-        <option value="1">1 – I hope they die</option>
+        <option value="1">1 – I wouldn't be upset if they died</option>
       </select>
       <label for="atmosphere">Atmosphere</label>
       <select id="atmosphere" name="atmosphere">
@@ -93,7 +93,7 @@
         <option value="2.5">2.5</option>
         <option value="2">2 – They need an editor / I’m confused</option>
         <option value="1.5">1.5</option>
-        <option value="1">1 – They didn’t use quotation marks and other stupid choices</option>
+        <option value="1">1 – They didn’t use quotation marks and other ridiculous choices</option>
       </select>
       <label for="plot">Plot</label>
       <select id="plot" name="plot">
@@ -192,5 +192,18 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Result Modal -->
+  
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <h3>CAWPILE Results</h3>
+      <p id="modalText"></p>
+      <div class="modal-actions class">
+        <button id="closeModalBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
