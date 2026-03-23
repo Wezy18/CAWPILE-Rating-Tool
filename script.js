@@ -1,68 +1,85 @@
-// Call Elements
-let characters = document.getElementById("characters");
-let atmosphere = document.getElementById("atmosphere");
-let writing = document.getElementById("writing");
-let plot = document.getElementById("plot");
-let intrigue = document.getElementById("intrigue");
-let logic = document.getElementById("logic");
-let enjoyment = document.getElementById("enjoyment");
-let myBtn = document.getElementById("myBtn");
+// Form elements
+const characters = document.getElementById("characters");
+const atmosphere = document.getElementById("atmosphere");
+const writing = document.getElementById("writing");
+const plot = document.getElementById("plot");
+const intrigue = document.getElementById("intrigue");
+const logic = document.getElementById("logic");
+const enjoyment = document.getElementById("enjoyment");
+const stars = document.getElementById("results-stars");
+const increments = document.getElementById("results-increment");
+const myBtn = document.getElementById("myBtn");
 
-myBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-  
-    // Convert and add the values
-    let total =
-      Number(characters.value) +
-      Number(atmosphere.value) +
-      Number(writing.value) +
-      Number(plot.value) +
-      Number(intrigue.value) +
-      Number(logic.value) +
-      Number(enjoyment.value);
-  
-    // Calculate raw average (CAWPILE score)
-    let rawStar = parseFloat((total / 7).toFixed(3)); // rounded to 3 decimals
-  
-    // Round to nearest 0.25 only if remainder >= 0.125
-    function roundToNearestQuarter(value) {
-      const remainder = value % 0.25;
-      if (remainder >= 0.125) {
-        return Math.round(value * 4) / 4;
-      } else {
-        return Math.floor(value * 4) / 4;
-      }
+// Modal elements
+const modal = document.getElementById("resultModal");
+const modalText = document.getElementById("modalText");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+// Rounding functions
+function roundToNearestWhole(value) {
+  return Math.round(value);
+}
+
+function roundToNearestHalf(value) {
+  return Math.round(value * 2) / 2;
+}
+
+function roundToNearestQuarter(value) {
+  return Math.round(value * 4) / 4;
+}
+
+// Submit button event
+myBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Add all category values
+  const total =
+    Number(characters.value) +
+    Number(atmosphere.value) +
+    Number(writing.value) +
+    Number(plot.value) +
+    Number(intrigue.value) +
+    Number(logic.value) +
+    Number(enjoyment.value);
+
+  // Calculate average score
+  const rawStar = total / 7;
+  let finalStar;
+
+  // Determine correct score scale and rounding
+  if (stars.value === "10") {
+    if (increments.value === "1") {
+      finalStar = roundToNearestWhole(rawStar);
+    } else if (increments.value === "0.5") {
+      finalStar = roundToNearestHalf(rawStar);
+    } else {
+      finalStar = roundToNearestQuarter(rawStar);
     }
-  
-    // Convert to star rating out of 5
-    let finalStar = roundToNearestQuarter(rawStar / 2); // divided by 2 for 5-star scale
-  
-    // Display result in modal
-    let modal = document.getElementById("resultModal");
-    let modalText = document.getElementById("modalText");
-    let closeBtn = document.querySelector(".close");
+  } else {
+    const fiveStarScore = rawStar / 2;
 
-    modalText.innerHTML = `CAWPILE Average: <strong>${rawStar}</strong><br>Star Rating: <strong>${finalStar}</strong>`;
-    modal.style.display = "flex";
+    if (increments.value === "1") {
+      finalStar = roundToNearestWhole(fiveStarScore);
+    } else if (increments.value === "0.5") {
+      finalStar = roundToNearestHalf(fiveStarScore);
+    } else {
+      finalStar = roundToNearestQuarter(fiveStarScore);
+    }
+  }
 
-    // Close modal when clicking the close
-    let closeModalBtn = document.getElementById("closeModalBtn");
+  // Show result in modal
+  modalText.innerHTML = `Star Rating: <strong>${finalStar}</strong>`;
+  modal.style.display = "flex";
+});
 
-    closeBtn.onclick = closeModalBtn.onclick = function() {
-      modal.style.display = "none";
-    };
+// Close modal with button
+closeModalBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
 
-    window.onclick = function(e) {
-      if (e.target === modal) modal.style.display = "none";
-    };
-
-    // Close modal when clicking outside the box
-    window.onclick = function(e) {
-      if (e.target == modal) {
-        modal.style.display = "none";
-      }
-    };
-  });
-  
-
-
+// Close modal when clicking outside modal content
+window.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});

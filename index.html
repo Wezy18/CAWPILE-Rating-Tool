@@ -29,6 +29,18 @@
     </p>
     <br>
     <form>
+      <label for="results-stars">How many stars would you like your rating to be?</label>
+      <select id="results-stars" name="results-stars">
+        <option value="10">10</option>
+        <option value="5">5</option>
+      </select>
+      <label for="results-increment">How detailed do you want your rating to be?</label>
+        <select id="results-increment" name="results-increment">
+          <option value="1">Whole Numbers (1)</option>
+          <option value="0.5">Half Steps (0.5)</option>
+          <option value="0.25">Quarter Steps (0.25)</option>
+        </select>
+      <hr>
       <label for="characters">Characters</label>
       <select id="characters" name="characters">
         <option value="10">10 – I would die for them</option>
@@ -190,9 +202,7 @@
   <footer>
     <div class="footer_text">Rebecca Corder &copy 2024</div>
   </footer>
-
-  <script src="script.js"></script>
-
+  
   <!-- Result Modal -->
   
   <div id="resultModal" class="modal">
@@ -204,6 +214,6 @@
       </div>
     </div>
   </div>
-
+  <script src="script.js"></script>
 </body>
 </html>

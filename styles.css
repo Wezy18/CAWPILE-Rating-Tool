@@ -23,6 +23,14 @@ body {
   padding: 20px;
 }
 
+hr {
+  border: none;
+  background-color: #edfbff;
+  width: 90%;
+  height: 3px;
+  margin: 3%;
+}
+
 h1 {
   color: #192831;
   font-family: "Special Elite", system-ui;
@@ -31,6 +39,7 @@ h1 {
 p {
   padding-bottom: 35px;
 }
+
 .title {
   display: flex;
   justify-content: center;
