@@ -9,6 +9,8 @@ const enjoyment = document.getElementById("enjoyment");
 const stars = document.getElementById("results-stars");
 const increments = document.getElementById("results-increment");
 const myBtn = document.getElementById("myBtn");
+const title = document.getElementById("book-title");
+const author = document.getElementById("author");
 
 // Modal elements
 const modal = document.getElementById("resultModal");
@@ -68,7 +70,7 @@ myBtn.addEventListener("click", function (e) {
   }
 
   // Show result in modal
-  modalText.innerHTML = `Star Rating: <strong>${finalStar}</strong>`;
+  modalText.innerHTML = `Book: <strong>${title.value}</strong><br>Author: <strong>${author.value}</strong><br>Star Rating: <strong>${finalStar}</strong>`;
   modal.style.display = "flex";
 });
 

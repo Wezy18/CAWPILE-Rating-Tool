@@ -55,7 +55,7 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-form {
+form, fieldset{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,13 +66,13 @@ form {
   border-radius: 10px;
 }
 
-label {
+label, legend{
   color: #ffffff;
   font-weight: 600;
   margin-top: 10px;
 }
 
-select {
+select, input[type="text"] {
   width: 60%;
   padding: 8px;
   background-color: #fdfdfd;

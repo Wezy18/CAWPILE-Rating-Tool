@@ -29,172 +29,184 @@
     </p>
     <br>
     <form>
-      <label for="results-stars">How many stars would you like your rating to be?</label>
-      <select id="results-stars" name="results-stars">
-        <option value="10">10</option>
-        <option value="5">5</option>
-      </select>
-      <label for="results-increment">How detailed do you want your rating to be?</label>
-        <select id="results-increment" name="results-increment">
-          <option value="1">Whole Numbers (1)</option>
-          <option value="0.5">Half Steps (0.5)</option>
-          <option value="0.25">Quarter Steps (0.25)</option>
+      <fieldset>
+        <legend>Rating System Settings</legend>
+        <label for="results-stars">How many stars would you like your rating to be?</label>
+        <select id="results-stars" name="results-stars">
+          <option value="10">10</option>
+          <option value="5">5</option>
         </select>
-      <hr>
-      <label for="characters">Characters</label>
-      <select id="characters" name="characters">
-        <option value="10">10 – I would die for them</option>
-        <option value="9.5">9.5</option>
-        <option value="9">9 – I’ll think about these characters often</option>
-        <option value="8.5">8.5</option>
-        <option value="8">8 – The characters are really good</option>
-        <option value="7.5">7.5</option>
-        <option value="7">7 – I really like some of the characters</option>
-        <option value="6.5">6.5</option>
-        <option value="6">6 – I sort of like a few characters</option>
-        <option value="5.5">5.5</option>
-        <option value="5">5 – No strong feelings</option>
-        <option value="4.5">4.5</option>
-        <option value="4">4 – 1 or 2 characters aren’t terrible</option>
-        <option value="3.5">3.5</option>
-        <option value="3">3 – I couldn’t care less</option>
-        <option value="2.5">2.5</option>
-        <option value="2">2 – They don’t seem like real people.</option>
-        <option value="1.5">1.5</option>
-        <option value="1">1 – I wouldn't be upset if they died</option>
-      </select>
-      <label for="atmosphere">Atmosphere</label>
-      <select id="atmosphere" name="atmosphere">
-        <option value="10">10 – Setting is amazing and unique</option>
-        <option value="9.5">9.5</option>
-        <option value="9">9 – I want to read more books in this setting</option>
-        <option value="8.5">8.5</option>
-        <option value="8">8 – I really like the setting</option>
-        <option value="7.5">7.5</option>
-        <option value="7">7 – Setting is pretty good</option>
-        <option value="6.5">6.5</option>
-        <option value="6">6 – Nothing special, a few cool things</option>
-        <option value="5.5">5.5</option>
-        <option value="5">5 – No strong feelings</option>
-        <option value="4.5">4.5</option>
-        <option value="4">4 – A few things were good</option>
-        <option value="3.5">3.5</option>
-        <option value="3">3 – Haven’t I read this before?</option>
-        <option value="2.5">2.5</option>
-        <option value="2">2 – Boring, Boring, Boring</option>
-        <option value="1.5">1.5</option>
-        <option value="1">1 – Where did this book take place?</option>
-      </select>
-      <label for="writing">Writing</label>
-      <select id="writing" name="writing">
-        <option value="10">10 – Wow, that was awesome</option>
-        <option value="9.5">9.5</option>
-        <option value="9">9 – Excellent</option>
-        <option value="8.5">8.5</option>
-        <option value="8">8 – Very good</option>
-        <option value="7.5">7.5</option>
-        <option value="7">7 – I liked it</option>
-        <option value="6.5">6.5</option>
-        <option value="6">6 – It seemed pretty good</option>
-        <option value="5.5">5.5</option>
-        <option value="5">5 – No strong feelings</option>
-        <option value="4.5">4.5</option>
-        <option value="4">4 – I had to reread stuff repeatedly</option>
-        <option value="3.5">3.5</option>
-        <option value="3">3 – Why would you do that?</option>
-        <option value="2.5">2.5</option>
-        <option value="2">2 – They need an editor / I’m confused</option>
-        <option value="1.5">1.5</option>
-        <option value="1">1 – They didn’t use quotation marks and other ridiculous choices</option>
-      </select>
-      <label for="plot">Plot</label>
-      <select id="plot" name="plot">
-        <option value="10">10 – Masterfully crafted, every twist landed</option>
-        <option value="9.5">9.5</option>
-        <option value="9">9 – Great pacing and developments</option>
-        <option value="8.5">8.5</option>
-        <option value="8">8 – Solid structure and flow</option>
-        <option value="7.5">7.5</option>
-        <option value="7">7 – Good, a few rough patches</option>
-        <option value="6.5">6.5</option>
-        <option value="6">6 – Okay, predictable or uneven at times</option>
-        <option value="5.5">5.5</option>
-        <option value="5">5 – No strong feelings</option>
-        <option value="4.5">4.5</option>
-        <option value="4">4 – Some plot holes or confusion</option>
-        <option value="3.5">3.5</option>
-        <option value="3">3 – Where is this going?</option>
-        <option value="2.5">2.5</option>
-        <option value="2">2 – Illogical or sloppy</option>
-        <option value="1.5">1.5</option>
-        <option value="1">1 – What even was the plot?</option>
-      </select>
-      <label for="intrigue">Intrigue</label>
-      <select id="intrigue" name="intrigue">
-        <option value="10">10 – I couldn't put it down</option>
-        <option value="9.5">9.5</option>
-        <option value="9">9 – I kept wanting to read more</option>
-        <option value="8.5">8.5</option>
-        <option value="8">8 – I was mostly hooked</option>
-        <option value="7.5">7.5</option>
-        <option value="7">7 – Pretty engaging overall</option>
-        <option value="6.5">6.5</option>
-        <option value="6">6 – It held my attention enough</option>
-        <option value="5.5">5.5</option>
-        <option value="5">5 – No strong feelings</option>
-        <option value="4.5">4.5</option>
-        <option value="4">4 – I got distracted often</option>
-        <option value="3.5">3.5</option>
-        <option value="3">3 – I kept checking the page count</option>
-        <option value="2.5">2.5</option>
-        <option value="2">2 – I had to force myself to finish</option>
-        <option value="1.5">1.5</option>
-        <option value="1">1 – I didn’t care what happened</option>
-      </select>
-      <label for="logic">Logic</label>
-      <select id="logic" name="logic">
-        <option value="10">10 – Everything made sense and flowed perfectly</option>
-        <option value="9.5">9.5</option>
-        <option value="9">9 – Very few issues with consistency or world rules</option>
-        <option value="8.5">8.5</option>
-        <option value="8">8 – Mostly solid logic and internal consistency</option>
-        <option value="7.5">7.5</option>
-        <option value="7">7 – Minor inconsistencies but forgivable</option>
-        <option value="6.5">6.5</option>
-        <option value="6">6 – Some logic gaps or weak worldbuilding</option>
-        <option value="5.5">5.5</option>
-        <option value="5">5 – No strong feelings</option>
-        <option value="4.5">4.5</option>
-        <option value="4">4 – Significant plot or rule inconsistencies</option>
-        <option value="3.5">3.5</option>
-        <option value="3">3 – Many things didn't add up</option>
-        <option value="2.5">2.5</option>
-        <option value="2">2 – The world or logic completely fell apart</option>
-        <option value="1.5">1.5</option>
-        <option value="1">1 – Nonsensical or contradictory</option>
-      </select>
-      <label for="enjoyment">Enjoyment</label>
-      <select id="enjoyment" name="enjoyment">
-        <option value="10">10 – I absolutely loved it</option>
-        <option value="9.5">9.5</option>
-        <option value="9">9 – I really, really liked it</option>
-        <option value="8.5">8.5</option>
-        <option value="8">8 – I enjoyed it a lot</option>
-        <option value="7.5">7.5</option>
-        <option value="7">7 – I liked it</option>
-        <option value="6.5">6.5</option>
-        <option value="6">6 – It was okay</option>
-        <option value="5.5">5.5</option>
-        <option value="5">5 – Meh</option>
-        <option value="4.5">4.5</option>
-        <option value="4">4 – Some parts were painful to get through</option>
-        <option value="3.5">3.5</option>
-        <option value="3">3 – Not very enjoyable</option>
-        <option value="2.5">2.5</option>
-        <option value="2">2 – I regret reading it</option>
-        <option value="1.5">1.5</option>
-        <option value="1">1 – I hated it</option>
-      </select>
+        <label for="results-increment">How detailed do you want your rating to be?</label>
+          <select id="results-increment" name="results-increment">
+            <option value="1">Whole Numbers (1)</option>
+            <option value="0.5">Half Steps (0.5)</option>
+            <option value="0.25">Quarter Steps (0.25)</option>
+          </select>
+      </fieldset>
+      <fieldset>
+        <legend>Book Information</legend>
+        <label for="book-title">Book Title</label>
+        <input type="text" id="book-title" name="book-title">
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author">
+      </fieldset>
+      <fieldset>
+        <legend>CAWPILE Ratings</legend>
+        <label for="characters">Characters</label>
+        <select id="characters" name="characters">
+          <option value="10">10 – I would die for them</option>
+          <option value="9.5">9.5</option>
+          <option value="9">9 – I’ll think about these characters often</option>
+          <option value="8.5">8.5</option>
+          <option value="8">8 – The characters are really good</option>
+          <option value="7.5">7.5</option>
+          <option value="7">7 – I really like some of the characters</option>
+          <option value="6.5">6.5</option>
+          <option value="6">6 – I sort of like a few characters</option>
+          <option value="5.5">5.5</option>
+          <option value="5">5 – No strong feelings</option>
+          <option value="4.5">4.5</option>
+          <option value="4">4 – 1 or 2 characters aren’t terrible</option>
+          <option value="3.5">3.5</option>
+          <option value="3">3 – I couldn’t care less</option>
+          <option value="2.5">2.5</option>
+          <option value="2">2 – They don’t seem like real people.</option>
+          <option value="1.5">1.5</option>
+          <option value="1">1 – I wouldn't be upset if they died</option>
+        </select>
+        <label for="atmosphere">Atmosphere</label>
+        <select id="atmosphere" name="atmosphere">
+          <option value="10">10 – Setting is amazing and unique</option>
+          <option value="9.5">9.5</option>
+          <option value="9">9 – I want to read more books in this setting</option>
+          <option value="8.5">8.5</option>
+          <option value="8">8 – I really like the setting</option>
+          <option value="7.5">7.5</option>
+          <option value="7">7 – Setting is pretty good</option>
+          <option value="6.5">6.5</option>
+          <option value="6">6 – Nothing special, a few cool things</option>
+          <option value="5.5">5.5</option>
+          <option value="5">5 – No strong feelings</option>
+          <option value="4.5">4.5</option>
+          <option value="4">4 – A few things were good</option>
+          <option value="3.5">3.5</option>
+          <option value="3">3 – Haven’t I read this before?</option>
+          <option value="2.5">2.5</option>
+          <option value="2">2 – Boring, Boring, Boring</option>
+          <option value="1.5">1.5</option>
+          <option value="1">1 – Where did this book take place?</option>
+        </select>
+        <label for="writing">Writing</label>
+        <select id="writing" name="writing">
+          <option value="10">10 – Wow, that was awesome</option>
+          <option value="9.5">9.5</option>
+          <option value="9">9 – Excellent</option>
+          <option value="8.5">8.5</option>
+          <option value="8">8 – Very good</option>
+          <option value="7.5">7.5</option>
+          <option value="7">7 – I liked it</option>
+          <option value="6.5">6.5</option>
+          <option value="6">6 – It seemed pretty good</option>
+          <option value="5.5">5.5</option>
+          <option value="5">5 – No strong feelings</option>
+          <option value="4.5">4.5</option>
+          <option value="4">4 – I had to reread stuff repeatedly</option>
+          <option value="3.5">3.5</option>
+          <option value="3">3 – Why would you do that?</option>
+          <option value="2.5">2.5</option>
+          <option value="2">2 – They need an editor / I’m confused</option>
+          <option value="1.5">1.5</option>
+          <option value="1">1 – They didn’t use quotation marks and other ridiculous choices</option>
+        </select>
+        <label for="plot">Plot</label>
+        <select id="plot" name="plot">
+          <option value="10">10 – Masterfully crafted, every twist landed</option>
+          <option value="9.5">9.5</option>
+          <option value="9">9 – Great pacing and developments</option>
+          <option value="8.5">8.5</option>
+          <option value="8">8 – Solid structure and flow</option>
+          <option value="7.5">7.5</option>
+          <option value="7">7 – Good, a few rough patches</option>
+          <option value="6.5">6.5</option>
+          <option value="6">6 – Okay, predictable or uneven at times</option>
+          <option value="5.5">5.5</option>
+          <option value="5">5 – No strong feelings</option>
+          <option value="4.5">4.5</option>
+          <option value="4">4 – Some plot holes or confusion</option>
+          <option value="3.5">3.5</option>
+          <option value="3">3 – Where is this going?</option>
+          <option value="2.5">2.5</option>
+          <option value="2">2 – Illogical or sloppy</option>
+          <option value="1.5">1.5</option>
+          <option value="1">1 – What even was the plot?</option>
+        </select>
+        <label for="intrigue">Intrigue</label>
+        <select id="intrigue" name="intrigue">
+          <option value="10">10 – I couldn't put it down</option>
+          <option value="9.5">9.5</option>
+          <option value="9">9 – I kept wanting to read more</option>
+          <option value="8.5">8.5</option>
+          <option value="8">8 – I was mostly hooked</option>
+          <option value="7.5">7.5</option>
+          <option value="7">7 – Pretty engaging overall</option>
+          <option value="6.5">6.5</option>
+          <option value="6">6 – It held my attention enough</option>
+          <option value="5.5">5.5</option>
+          <option value="5">5 – No strong feelings</option>
+          <option value="4.5">4.5</option>
+          <option value="4">4 – I got distracted often</option>
+          <option value="3.5">3.5</option>
+          <option value="3">3 – I kept checking the page count</option>
+          <option value="2.5">2.5</option>
+          <option value="2">2 – I had to force myself to finish</option>
+          <option value="1.5">1.5</option>
+          <option value="1">1 – I didn’t care what happened</option>
+        </select>
+        <label for="logic">Logic</label>
+        <select id="logic" name="logic">
+          <option value="10">10 – Everything made sense and flowed perfectly</option>
+          <option value="9.5">9.5</option>
+          <option value="9">9 – Very few issues with consistency or world rules</option>
+          <option value="8.5">8.5</option>
+          <option value="8">8 – Mostly solid logic and internal consistency</option>
+          <option value="7.5">7.5</option>
+          <option value="7">7 – Minor inconsistencies but forgivable</option>
+          <option value="6.5">6.5</option>
+          <option value="6">6 – Some logic gaps or weak worldbuilding</option>
+          <option value="5.5">5.5</option>
+          <option value="5">5 – No strong feelings</option>
+          <option value="4.5">4.5</option>
+          <option value="4">4 – Significant plot or rule inconsistencies</option>
+          <option value="3.5">3.5</option>
+          <option value="3">3 – Many things didn't add up</option>
+          <option value="2.5">2.5</option>
+          <option value="2">2 – The world or logic completely fell apart</option>
+          <option value="1.5">1.5</option>
+          <option value="1">1 – Nonsensical or contradictory</option>
+        </select>
+        <label for="enjoyment">Enjoyment</label>
+        <select id="enjoyment" name="enjoyment">
+          <option value="10">10 – I absolutely loved it</option>
+          <option value="9.5">9.5</option>
+          <option value="9">9 – I really, really liked it</option>
+          <option value="8.5">8.5</option>
+          <option value="8">8 – I enjoyed it a lot</option>
+          <option value="7.5">7.5</option>
+          <option value="7">7 – I liked it</option>
+          <option value="6.5">6.5</option>
+          <option value="6">6 – It was okay</option>
+          <option value="5.5">5.5</option>
+          <option value="5">5 – Meh</option>
+          <option value="4.5">4.5</option>
+          <option value="4">4 – Some parts were painful to get through</option>
+          <option value="3.5">3.5</option>
+          <option value="3">3 – Not very enjoyable</option>
+          <option value="2.5">2.5</option>
+          <option value="2">2 – I regret reading it</option>
+          <option value="1.5">1.5</option>
+          <option value="1">1 – I hated it</option>
+        </select>
+      </fieldset>
       <button id="myBtn" type="submit">Submit</button>
     </form>
   </main>
